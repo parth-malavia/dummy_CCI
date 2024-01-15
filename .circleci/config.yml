@@ -36,10 +36,11 @@ workflows:
       - deploy:
           requires:
             - test
-  scheduled-bihourly:
+  
+  schedule-workflow:
     triggers:
       - schedule:
-          cron: '*/30 * * * *'  # Run every 1/2 hour
+          cron: "*/30 * * * *"
     jobs:
       - test
       - build:
