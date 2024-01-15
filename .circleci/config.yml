@@ -36,7 +36,6 @@ workflows:
       - deploy:
           requires:
             - test
-  
   schedule-workflow:
     triggers:
       - schedule:
