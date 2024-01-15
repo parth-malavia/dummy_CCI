@@ -39,7 +39,7 @@ workflows:
   schedule-workflow:
     triggers:
       - schedule:
-          cron: "*/30 * * * *"
+          cron: "0 * * * *"
     jobs:
       - test
       - build:
