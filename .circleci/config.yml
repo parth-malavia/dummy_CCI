@@ -27,6 +27,12 @@ jobs:
           command: python deploy.py
 
 workflows:
-  build-workflow:
+  example:
     jobs:
-      - build
+      - test
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - test
